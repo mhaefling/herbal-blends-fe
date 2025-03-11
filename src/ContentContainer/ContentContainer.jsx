@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import NavComponent from '../NavComponent/NavComponent'
 import SubscriptionsComponent from '../SubscriptionsComponent/SubscriptionsComponent'
 import DetailedSubscription from '../DetailedSubscription/DetailedSubscription'
+import CustomersComponent from '../CustomersComponent/CustomersComponent'
 
 function ContentContainer() {
 
@@ -62,7 +63,7 @@ function ContentContainer() {
 	if (!subscriptions && !customers && !teas) {
 		return (
 			<main className="HBContent">
-				<h1>Loading Subscription and Customer Data...</h1>
+				<h1>Loading Subscription, Customers, Teas Data...</h1>
 			</main>
 		)
 	} else {
@@ -72,6 +73,7 @@ function ContentContainer() {
 				<Routes>
 					<Route path="/" element={<SubscriptionsComponent subscriptions={subscriptions} />} />
 					<Route path="/subscriptions/:id" element={<DetailedSubscription />} />
+					<Route path="/customers" element={<CustomersComponent customers={customers} />} />
 				</Routes>
 			</main>
 		)

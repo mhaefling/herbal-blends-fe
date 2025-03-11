@@ -1,0 +1,34 @@
+.HBCustomerList {
+	background-color: white;
+}
+
+.HBCustomerList h2 {
+	color:black
+}
+
+.HBCustomerList img{
+	height: 25%;
+	width: 25%;
+}
+
+.HBCustomerList table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.HBCustomerList tr {
+	border: 1px solid black;
+}
+
+.customerIcon {
+	width: 4%;
+}
+
+.HBCustomerList td {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.HBCustomerList p {
+	color: black;
+}

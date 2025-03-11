@@ -5,7 +5,6 @@ import './SubscriptionsComponent.css'
 function SubscriptionsComponent({ subscriptions }) {
 	
 	const all_subs = subscriptions.map(sub => {
-		console.log(sub)
 		return (
 			<tbody key={sub.id}>
 				<tr>
@@ -24,6 +23,7 @@ function SubscriptionsComponent({ subscriptions }) {
 		</tbody>
 		)
 	})
+	
 	return (
 		<section className="HBSubList">
 			<h2>Subscriptions</h2>
