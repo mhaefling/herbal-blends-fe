@@ -21,14 +21,15 @@
 }
 
 .teaIcon {
-	width: 7%;
+	width: 4%;
 }
 
 .HBSubList td {
 	border-left: 1px solid black;
 	border-right: 1px solid black;
+
 }
 
 .HBSubList p {
- color: black;
+	color: black;
 }

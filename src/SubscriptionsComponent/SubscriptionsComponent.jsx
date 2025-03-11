@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import teaIcon from '../assets/teaIcon.png'
 import './SubscriptionsComponent.css'
 
@@ -12,7 +13,9 @@ function SubscriptionsComponent({ subscriptions }) {
 						<img src={teaIcon} alt="Little tea icon for each subscription" />
 					</td>
 					<td alt="Subscription Title">
-						<p>{sub.attributes.title}</p>
+						<Link to={`/subscriptions/${sub.id}`}>
+							{sub.attributes.title}
+						</Link>
 					</td>
 					<td alt="Total Customers Subscribed">
 						<p>{sub.attributes.total_active_customers}</p>
