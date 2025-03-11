@@ -1,13 +1,13 @@
 .HBHeader {
 	display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 	background-color: white;
 }
 
 .HBHeader img {
-	margin-left: 2%;
+	margin-left: 0;
 	height: 10%;
 	width: 10%;
 }
@@ -15,7 +15,8 @@
 .HBHeader h1 {
 	flex-grow: 1;
   text-align: center;
-	color: black
+	color: black;
+	margin: 0;
 }
 
 .HBHeader p {
