@@ -1,5 +1,5 @@
 import './HeaderContainer.css'
-import HBLogo from '../images/logo.jpg'
+import HBLogo from '../assets/logo.jpg'
 
 function HeaderContainer() {
 	return (
