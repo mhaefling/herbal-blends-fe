@@ -4,6 +4,7 @@ import NavComponent from '../NavComponent/NavComponent'
 import SubscriptionsComponent from '../SubscriptionsComponent/SubscriptionsComponent'
 import DetailedSubscription from '../DetailedSubscription/DetailedSubscription'
 import CustomersComponent from '../CustomersComponent/CustomersComponent'
+import TeasComponent from '../TeasComponent/TeasComponent'
 
 function ContentContainer() {
 
@@ -74,6 +75,7 @@ function ContentContainer() {
 					<Route path="/" element={<SubscriptionsComponent subscriptions={subscriptions} />} />
 					<Route path="/subscriptions/:id" element={<DetailedSubscription />} />
 					<Route path="/customers" element={<CustomersComponent customers={customers} />} />
+					<Route path="/teas" element={<TeasComponent teas={teas} />} />
 				</Routes>
 			</main>
 		)
