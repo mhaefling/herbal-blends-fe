@@ -1,0 +1,28 @@
+.HBHeader {
+	display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+	background-color: white;
+}
+
+.HBHeader img {
+	margin-left: 2%;
+	height: 10%;
+	width: 10%;
+}
+
+.HBHeader h1 {
+	flex-grow: 1;
+  text-align: center;
+	color: black
+}
+
+.HBHeader p {
+	margin: 0px;
+	position: absolute;
+  bottom: 1px;
+  right: 10px;
+	color: black;
+	font-size: x-small;
+}
