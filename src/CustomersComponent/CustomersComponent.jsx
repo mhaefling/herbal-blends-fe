@@ -19,6 +19,9 @@ function CustomersComponent({ customers }) {
 					<td alt="customerEmail">
 						<p>{customer.attributes.email}</p>
 					</td>
+					<td>
+						<p>{customer.attributes.address}</p>
+					</td>
 				</tr>
 		</tbody>
 		)
@@ -28,6 +31,25 @@ function CustomersComponent({ customers }) {
 		<section className="HBCustomerList">
 		<h2>Customers</h2>
 		<table>
+			<thead className="SubSections">
+				<tr>
+					<td>
+						<p>Type:</p>
+					</td>
+					<td>
+						<p>First Name:</p>
+					</td>
+					<td>
+						<p>Last Name:</p>
+					</td>
+					<td>
+						<p>Email:</p>
+					</td>
+					<td>
+						<p>Address:</p>
+					</td>
+				</tr>
+			</thead>
 			{all_customers}
 		</table>
 	</section>

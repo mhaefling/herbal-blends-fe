@@ -33,3 +33,7 @@
 .HBSubList p {
 	color: black;
 }
+
+.SubSections td p {
+	text-decoration: underline;
+}

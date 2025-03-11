@@ -31,6 +31,25 @@ function TeasComponent({ teas }) {
 		<section className="HBTeaList">
 		<h2>Available Teas</h2>
 		<table>
+			<thead className="SubSections">
+				<tr>
+					<td>
+						<p>Type:</p>
+					</td>
+					<td>
+						<p>Name:</p>
+					</td>
+					<td>
+						<p>Description:</p>
+					</td>
+					<td>
+						<p>Temp:</p>
+					</td>
+					<td>
+						<p>Brew Time:</p>
+					</td>
+				</tr>
+			</thead>
 			{all_teas}
 		</table>
 	</section>
