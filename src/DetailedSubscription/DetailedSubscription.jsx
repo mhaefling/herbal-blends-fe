@@ -24,53 +24,53 @@ function DetailedSubscription() {
 		}
 }, [subDetails]);
 
-const sub_teas = subDetails?.attributes?.teas?.map((tea) => {
-	return (
-		<option key={tea.title} value={tea.title}>
-			{tea.title}
-		</option>
-	)
-})
-
-const printTeaDescription = (title) => {
-	const tea = subDetails?.attributes?.teas?.find((tea) => tea.title === title);
-	if (tea) {
+	const sub_teas = subDetails?.attributes?.teas?.map((tea) => {
 		return (
-			<section className="teaDescription">
-				<p className="subInfo">Description:</p>
-				<p className="teaValues">{tea.description}</p>
-				<p className="subInfo">Temperature:</p>
-				<p className="teaValues">{tea.temp}&deg;</p>
-				<p className="subInfo">Brew Time:</p>
-				<p className="teaValues">{tea.brew_time} - Mins</p>
-			</section>
+			<option key={tea.title} value={tea.title}>
+				{tea.title}
+			</option>
 		)
-	} else {
-		return null
-	}
-};
+	})
 
-const activeCustomers = subDetails?.attributes?.customers?.map((customer) => {
-	if (customer.sub_status === true) {
-		return (
-			<div>
-				<p>{customer.first_name} {customer.last_name}</p>
-				<p>{customer.email}</p>
-			</div>
-		)
-	}
-})
+	const printTeaDescription = (title) => {
+		const tea = subDetails?.attributes?.teas?.find((tea) => tea.title === title);
+		if (tea) {
+			return (
+				<section className="teaDescription">
+					<p className="subInfo">Description:</p>
+					<p className="teaValues">{tea.description}</p>
+					<p className="subInfo">Temperature:</p>
+					<p className="teaValues">{tea.temp}&deg;</p>
+					<p className="subInfo">Brew Time:</p>
+					<p className="teaValues">{tea.brew_time} - Mins</p>
+				</section>
+			)
+		} else {
+			return null
+		}
+	};
 
-const deactiveCustomers = subDetails?.attributes?.customers?.map((customer) => {
-	if (customer.sub_status === false) {
-		return (
-			<section>
-				<p>{customer.first_name} {customer.last_name}</p>
-				<p>{customer.email}</p>
-			</section>
-		)
-	}
-})
+	const activeCustomers = subDetails?.attributes?.customers?.map((customer) => {
+		if (customer.sub_status === true) {
+			return (
+				<div key={customer.id} alt="Active Customer" className="Customers">
+					<p>{customer.first_name} {customer.last_name}</p>
+					<a href={`mailto:${customer.email}`} alt="Email Customer">{customer.email}</a>
+				</div>
+			)
+		}
+	})
+
+	const deactiveCustomers = subDetails?.attributes?.customers?.map((customer) => {
+		if (customer.sub_status === false) {
+			return (
+				<div key={customer.id} alt="Deactive Customer" className="Customers">
+					<p>{customer.first_name} {customer.last_name}</p>
+					<p>{customer.email}</p>
+				</div>
+			)
+		}
+	})
 
 	if (!subDetails) {
 		return (
@@ -123,11 +123,11 @@ const deactiveCustomers = subDetails?.attributes?.customers?.map((customer) => {
 							<td colSpan="2"><p className="subInfo">Active Customers:</p></td>
 							<td colSpan="2"><p className="subInfo">Deactive Customers:</p></td>
 						</tr>
-						<tr>
-							<td className="activeCustomers">
+						<tr className="Customers">
+							<td className="Customers" colSpan="2">
 								{activeCustomers}
 							</td>
-							<td>
+							<td className="Customers" colSpan="2">
 								{deactiveCustomers}
 							</td>
 						</tr>
