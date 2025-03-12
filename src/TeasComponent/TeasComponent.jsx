@@ -5,7 +5,7 @@ function TeasComponent({ teas }) {
 
 	const all_teas = teas.map(tea => {
 		return (
-			<TeaCard className="teaCard" key={tea.kid} tea={tea} />
+			<TeaCard className="teaCard" key={tea.id} tea={tea} />
 		)
 	})
 
@@ -15,11 +15,11 @@ function TeasComponent({ teas }) {
 		<table>
 			<thead className="SubSections">
 				<tr>
-					<td><p>Type:</p></td>
-					<td><p>Name:</p></td>
-					<td><p>Description:</p></td>
-					<td><p>Temp:</p></td>
-					<td><p>Brew Time:</p></td>
+					<td className="teaType"><p>Type:</p></td>
+					<td className="teaName"><p>Name:</p></td>
+					<td className="teaDescription"><p>Description:</p></td>
+					<td className="teaTemp"><p>Temp:</p></td>
+					<td className="teaBrewtime"><p>Brew Time:</p></td>
 				</tr>
 			</thead>
 		</table>

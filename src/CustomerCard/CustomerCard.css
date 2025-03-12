@@ -1,6 +1,7 @@
 .customerIcon {
 	height: 10%;
 	width: 10%;
+	text-align: left;
 }
 
 .customerIcon img {
@@ -15,11 +16,6 @@
 
 .HBCustomerCard tr {
 	border-bottom: 1px solid black;
-}
-
-.customerIcon {
-	width: 10%;
-	text-align: left;
 }
 
 .HBCustomerCard p {

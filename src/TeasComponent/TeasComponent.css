@@ -6,30 +6,47 @@
 	color:black
 }
 
-.HBTeaList img{
-	height: 25%;
-	width: 25%;
-}
-
 .HBTeaList table {
 	border-collapse: collapse;
 	width: 100%;
 }
 
 .HBTeaList tr {
-	border: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-bottom: 1%;
 }
 
-.teaIcon {
-	width: 4%;
-}
-
-.HBTeaList td {
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-
+.HBTeaList thead {
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 .HBTeaList p {
 	color: black;
+}
+
+.teaType {
+	width: 10%;
+	text-align: left;
+}
+
+.teaName {
+	width: 25%;
+	text-align: left;
+}
+
+.teaDescription {
+	width: 41%;
+	text-align: left;
+}
+
+.teaTemp {
+	width: 12%;
+	text-align: center;
+}
+
+.teaBrewTime {
+	width: 12%;
+	text-align: center;
 }

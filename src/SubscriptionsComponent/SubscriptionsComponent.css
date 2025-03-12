@@ -24,16 +24,20 @@
 
 .subType {
 	width: 10%;
+	text-align: left;
 }
 
 .subName {
 	width: 30%;
+	text-align: left;
 }
 
 .subTotal {
 	width: 15%;
+	text-align: center;
 }
 
 .subStatus {
 	width: 20%;
+	text-align: center;
 }
