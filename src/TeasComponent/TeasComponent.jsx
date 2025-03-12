@@ -1,29 +1,11 @@
-import teaIcon from '../assets/teaicon.png'
+import TeaCard from '../TeaCard/TeaCard'
 import './TeasComponent.css'
 
 function TeasComponent({ teas }) {
 
 	const all_teas = teas.map(tea => {
 		return (
-			<tbody key={tea.id}>
-				<tr>
-					<td className="teaIcon">
-						<img src={teaIcon} alt="Little tea icon for each tea." />
-					</td>
-					<td alt="Tea Name">
-							<p>{tea.attributes.title}</p>
-					</td>
-					<td alt="Tea Description">
-							<p>{tea.attributes.description}</p>
-					</td>
-					<td alt="Tea Temp">
-							<p>{tea.attributes.temp}</p>
-					</td>
-					<td alt="Tea brew time">
-						<p>{tea.attributes.brew_time}</p>
-					</td>
-				</tr>
-			</tbody>
+			<TeaCard className="teaCard" key={tea.kid} tea={tea} />
 		)
 	})
 
@@ -33,25 +15,15 @@ function TeasComponent({ teas }) {
 		<table>
 			<thead className="SubSections">
 				<tr>
-					<td>
-						<p>Type:</p>
-					</td>
-					<td>
-						<p>Name:</p>
-					</td>
-					<td>
-						<p>Description:</p>
-					</td>
-					<td>
-						<p>Temp:</p>
-					</td>
-					<td>
-						<p>Brew Time:</p>
-					</td>
+					<td><p>Type:</p></td>
+					<td><p>Name:</p></td>
+					<td><p>Description:</p></td>
+					<td><p>Temp:</p></td>
+					<td><p>Brew Time:</p></td>
 				</tr>
 			</thead>
-			{all_teas}
 		</table>
+		{all_teas}
 	</section>
 	)
 }

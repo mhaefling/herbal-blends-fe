@@ -1,0 +1,22 @@
+.teaIcon img{
+	height: 50%;
+	width: 50%;
+}
+
+.HBTeaCard table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.HBTeaCard tr {
+	border: 1px solid black;
+}
+
+.HBTeaCard td {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.HBTeaCard p {
+	color: black;
+}
