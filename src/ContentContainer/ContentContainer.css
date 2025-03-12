@@ -1,0 +1,20 @@
+.HBContent {
+	display: flex;
+	height: 100vh;
+}
+
+.HBNavigation {
+	width: 15%;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 16px;
+}
+
+.HBMainContent {
+	width: 85%;
+	padding: 16px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: white;
+}

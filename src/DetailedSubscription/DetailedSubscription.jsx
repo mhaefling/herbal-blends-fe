@@ -24,39 +24,53 @@ function DetailedSubscription() {
 		}
 }, [subDetails]);
 
-const sub_teas = subDetails?.attributes?.teas?.map((tea) => {
-	return (
-		<option key={tea.title} value={tea.title}>
-			{tea.title}
-		</option>
-	)
-})
-
-const printTeaDescription = (title) => {
-	const tea = subDetails?.attributes?.teas?.find((tea) => tea.title === title);
-	if (tea) {
+	const sub_teas = subDetails?.attributes?.teas?.map((tea) => {
 		return (
-			<section className="teaDescription">
-				<p>Description: {tea.description}</p>
-				<p>Temperature: {tea.temp}</p>
-				<p>Brew Time: {tea.brew_time}</p>
-			</section>
+			<option key={tea.title} value={tea.title}>
+				{tea.title}
+			</option>
 		)
-	} else {
-		return null
-	}
-};
+	})
 
-const sub_customers = subDetails?.attributes?.customers?.map((customer) => {
-	return (
-		<section>
-			<p>{customer.first_name}</p>
-			<p>{customer.last_name}</p>
-			<p>{customer.email}</p>
-			<p>{customer.sub_status}</p>
-		</section>
-	)
-})
+	const printTeaDescription = (title) => {
+		const tea = subDetails?.attributes?.teas?.find((tea) => tea.title === title);
+		if (tea) {
+			return (
+				<section className="teaDescription">
+					<p className="subInfo">Description:</p>
+					<p className="teaValues">{tea.description}</p>
+					<p className="subInfo">Temperature:</p>
+					<p className="teaValues">{tea.temp}&deg;</p>
+					<p className="subInfo">Brew Time:</p>
+					<p className="teaValues">{tea.brew_time} - Mins</p>
+				</section>
+			)
+		} else {
+			return null
+		}
+	};
+
+	const activeCustomers = subDetails?.attributes?.customers?.map((customer) => {
+		if (subDetails.attributes.status == customer.sub_status) {
+			return (
+				<div key={customer.id} alt="Active Customer" className="Customers">
+					<p key={customer.id}>{customer.first_name} {customer.last_name}</p>
+					<a href={`mailto:${customer.email}`} alt="Email Customer">{customer.email}</a>
+				</div>
+			)
+		}
+	})
+
+	const deactiveCustomers = subDetails?.attributes?.customers?.map((customer) => {
+		if (subDetails.attributes.status != customer.sub_status) {
+			return (
+				<div key={customer.id} alt="Active Customer" className="Customers">
+					<p key={customer.id}>{customer.first_name} {customer.last_name}</p>
+					<a href={`mailto:${customer.email}`} alt="Email Customer">{customer.email}</a>
+				</div>
+			)
+		}
+	})
 
 	if (!subDetails) {
 		return (
@@ -67,20 +81,58 @@ const sub_customers = subDetails?.attributes?.customers?.map((customer) => {
 	} else {
 		return (
 			<section className="HBSubDetails">
-				<h2>{subDetails.attributes.title}</h2>
-				<p>Subscription Price: {subDetails.attributes.price}</p>
-				<label for="Subscription Teas">Select a Tea:</label>
-				<select 
-					id="Teas"
-					name="HBTeas" 
-					size="8" 
-					onChange={(event) => setSelectedTeaDescription(printTeaDescription(event.target.value))}>
-
-						{sub_teas}
-				
-				</select>
-				{selectedTeaDescription}
-				{sub_customers}
+				<table>
+					<thead>
+						<tr className="subName">
+							<td colSpan="4"><h2>{subDetails.attributes.title}</h2></td>
+						</tr>
+						<tr className="SubDetails">
+							<td colSpan="2">
+								<p className="subInfo">Subscription Price:</p>
+							</td>
+							<td colSpan="2">
+								<p className="subInfo">Renews:</p>
+							</td>
+						</tr>
+						<tr className="subPricing">
+							<td colSpan="2"><p>${subDetails.attributes.price}0</p></td>
+							<td colSpan="2"><p>{subDetails.attributes.frequency}</p></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colSpan="2"><p className="subInfo">Teas Included:</p></td>
+							<td colSpan="2"><p className="subInfo">Tea Description:</p></td>
+						</tr>
+						<tr>
+							<td className="subTeaDesc" colSpan="2">
+								<label className="subTeaList" for="Subscription Teas">Select Tea Description:</label>
+								<select 
+								id="Teas"
+								name="HBTeas" 
+								size="20" 
+								onChange={(event) => setSelectedTeaDescription(printTeaDescription(event.target.value))}>
+									{sub_teas}
+								</select>
+							</td>
+							<td colSpan="2" className="subTeaDesc">{selectedTeaDescription}</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr className="subCustmers">
+							<td colSpan="2"><p className="subInfo">Active Customers:</p></td>
+							<td colSpan="2"><p className="subInfo">Deactive Customers:</p></td>
+						</tr>
+						<tr className="Customers">
+							<td className="Customers" colSpan="2">
+								{activeCustomers}
+							</td>
+							<td className="Customers" colSpan="2">
+								{deactiveCustomers}
+							</td>
+						</tr>
+					</tfoot>
+				</table>
 			</section>
 		)
 	}

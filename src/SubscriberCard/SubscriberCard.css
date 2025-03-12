@@ -1,0 +1,18 @@
+.subTotal p {
+	color: black;
+}
+
+.subStatus p {
+	color: black;
+}
+
+.subIcon {
+	width: 10%;
+	height: 10%;
+	text-align: left;
+}
+
+.subIcon img {
+	width: 50%;
+	height: 50%;
+}

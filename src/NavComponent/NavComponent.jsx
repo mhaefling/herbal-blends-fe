@@ -4,17 +4,38 @@ import './NavComponent.css'
 function NavComponent() {
 
 	return (
-		<nav className="HBNavigation">
-			<Link to="/" className="HBNavLink">
-				<p>Subscriptions</p>
-			</Link>
-			<Link to="/customers" className="HBNavLink">
-				<p>Customers</p>
-			</Link>
-			<Link to="/teas" className="HBNavLink">
-				<p>Teas</p>
-			</Link>
-		</nav>
+		<section className="HBNavLinks">
+			<table>
+				<thead>
+					<tr>
+						<td><p>Categories:</p></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<Link to="/">
+								<button>Subscriptions</button>
+							</Link>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<Link to="/customers">
+								<button>Customers</button>
+							</Link>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<Link to="/teas">
+								<button>Teas</button>
+							</Link>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
 	)
 
 }

@@ -1,0 +1,23 @@
+.customerIcon {
+	height: 10%;
+	width: 10%;
+	text-align: left;
+}
+
+.customerIcon img {
+	width: 50%;
+	height: 50%;
+}
+
+.HBCustomerCard table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.HBCustomerCard tr {
+	border-bottom: 1px solid black;
+}
+
+.HBCustomerCard p {
+	color: black;
+}

@@ -1,3 +1,23 @@
-.HBNavigation {
+.HBNavLinks {
 	background-color: white;
+	text-align: left;
+}
+
+.HBNavLinks table {
+	width: 100%;
+}
+.HBNavLinks thead {
+	color: black;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.HBNavLinks tbody td {
+	padding-bottom: 10px;
+}
+
+.HBNavLinks button {
+	background-color: #ffa84e;
+	border: 1px solid black;
+	padding: .3em;
 }

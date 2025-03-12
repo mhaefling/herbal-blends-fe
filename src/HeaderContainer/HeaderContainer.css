@@ -7,7 +7,7 @@
 }
 
 .HBHeader img {
-	margin-left: 0;
+	margin-left: 3.2%;
 	height: 10%;
 	width: 10%;
 }
@@ -15,7 +15,7 @@
 .HBHeader h1 {
 	flex-grow: 1;
   text-align: center;
-	color: black;
+	color: #e8100c;
 	margin: 0;
 }
 
