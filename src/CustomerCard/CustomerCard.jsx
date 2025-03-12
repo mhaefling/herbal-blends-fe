@@ -9,8 +9,8 @@ function CustomerCard({ customer }) {
 				<tbody>
 					<tr>
 						<td className="customerIcon"><img src={customerIcon} alt="Customer Icon" /></td>
-						<td className="customerName"><p>{customer.attributes.first_name}</p></td>
-						<td className="customerName"><p>{customer.attributes.last_name}</p></td>
+						<td className="customerFirstName"><p>{customer.attributes.first_name}</p></td>
+						<td className="customerLastName"><p>{customer.attributes.last_name}</p></td>
 						<td className="customerEmail"><p>{customer.attributes.email}</p></td>
 						<td className="customerAddress"><p>{customer.attributes.address}</p></td>
 					</tr>

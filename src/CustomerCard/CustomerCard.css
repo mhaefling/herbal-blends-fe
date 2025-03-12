@@ -1,6 +1,11 @@
-.customerIcon img{
-	height: 50%;
+.customerIcon {
+	height: 10%;
+	width: 10%;
+}
+
+.customerIcon img {
 	width: 50%;
+	height: 50%;
 }
 
 .HBCustomerCard table {
@@ -9,16 +14,12 @@
 }
 
 .HBCustomerCard tr {
-	border: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 .customerIcon {
 	width: 10%;
-}
-
-.HBCustomerCard td {
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	text-align: left;
 }
 
 .HBCustomerCard p {

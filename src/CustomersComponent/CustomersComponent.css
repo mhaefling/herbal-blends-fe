@@ -6,29 +6,43 @@
 	color:black
 }
 
-.HBCustomerList img{
-	height: 25%;
-	width: 25%;
-}
-
 .HBCustomerList table {
 	border-collapse: collapse;
 	width: 100%;
 }
 
 .HBCustomerList tr {
-	border: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-bottom: 1%;
 }
 
-.customerIcon {
-	width: 4%;
-}
-
-.HBCustomerList td {
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-}
-
-.HBCustomerList p {
+.HBCustomerList thead {
 	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.customerType {
+	width: 10%;
+	text-align: left;
+}
+
+.customerFirstName {
+	width: 15%;
+	text-align: left;
+}
+
+.customerLastName {
+	width: 15%;
+	text-align: left;
+}
+
+.customerEmail {
+	width: 30%;
+	text-align: left;
+}
+
+.customerAddress {
+	width: 30%;
+	text-align: left;
 }

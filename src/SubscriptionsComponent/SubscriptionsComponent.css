@@ -6,34 +6,34 @@
 	color:black
 }
 
-.HBSubList img{
-	height: 25%;
-	width: 25%;
-}
-
 .HBSubList table {
 	border-collapse: collapse;
 	width: 100%;
 }
 
 .HBSubList tr {
-	border: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-bottom: 1%;
 }
 
-.teaIcon {
-	width: 4%;
-}
-
-.HBSubList td {
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-
-}
-
-.HBSubList p {
+.HBSubList thead {
 	color: black;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
-.SubSections td p {
-	text-decoration: underline;
+.subType {
+	width: 10%;
+}
+
+.subName {
+	width: 30%;
+}
+
+.subTotal {
+	width: 15%;
+}
+
+.subStatus {
+	width: 20%;
 }

@@ -13,13 +13,13 @@ function CustomersComponent({ customers }) {
 		<section className="HBCustomerList">
 		<h2>Customers</h2>
 		<table>
-			<thead className="SubSections">
+			<thead>
 				<tr>
-					<td><p>Type:</p></td>
-					<td><p>First Name:</p></td>
-					<td><p>Last Name:</p></td>
-					<td><p>Email:</p></td>
-					<td><p>Address:</p></td>
+					<td className="customerType"><p>Type:</p></td>
+					<td className="customerFirstName"><p>First Name:</p></td>
+					<td className="customerLastName"><p>Last Name:</p></td>
+					<td className="customerEmail"><p>Email:</p></td>
+					<td className="customerAddress"><p>Address:</p></td>
 				</tr>
 			</thead>
 		</table>

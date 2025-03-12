@@ -20,13 +20,13 @@ function SubscriptionsComponent({ subscriptions, setSubscriptions }) {
 		<section className="HBSubList">
 			<h2>Subscriptions</h2>
 			<table>
-				<thead className="SubSections">
+				<thead>
 					<tr>
-						<td><p>Type:</p></td>
-						<td><p>Subscription Name:</p></td>
-						<td><p>Total Customers:</p></td>
-						<td><p>Status:</p></td>
-						<td><p>Update:</p></td>
+						<td className="subType"><p>Type:</p></td>
+						<td className="subName"><p>Subscription Name:</p></td>
+						<td className="subTotal"><p>Total Customers:</p></td>
+						<td className="subStatus"><p>Status:</p></td>
+						<td className="subUpdate"><p>Update:</p></td>
 					</tr>
 				</thead>
 			</table>

@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import subIcon from '../assets/subicon.png'
+import './SubscriberCard.css'
+
 function SubscriberCard({ sub, status, setSubscriptions }) {
 
 	function updateSubStatus(subId, statusRequest) {
@@ -34,7 +36,7 @@ function SubscriberCard({ sub, status, setSubscriptions }) {
 								<p>{sub.attributes.title}</p>
 							</Link>
 						</td>
-						<td className="subTotalCustomers"><p>{sub.attributes.total_active_customers}</p></td>
+						<td className="subTotal"><p>{sub.attributes.total_active_customers}</p></td>
 						<td className="subStatus"><p>{status}</p></td>
 						<td>
 							<button onClick={() => updateSubStatus(sub.id, !sub.attributes.status)}>Update Status</button>
