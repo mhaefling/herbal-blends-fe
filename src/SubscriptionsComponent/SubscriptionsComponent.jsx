@@ -2,10 +2,30 @@ import { Link } from 'react-router-dom'
 import subIcon from '../assets/subicon.png'
 import './SubscriptionsComponent.css'
 
-function SubscriptionsComponent({ subscriptions }) {
+function SubscriptionsComponent({ subscriptions, setSubscriptions }) {
+
+	function updateSubStatus(subId, statusRequest) {
+		fetch(`http://localhost:3000/api/v1/subscriptions/${subId}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				status: statusRequest
+			}),
+		})
+		.then((response) => response.json())
+		.then((data) => {
+			setSubscriptions((prevSubscriptions) => 
+				prevSubscriptions.map((sub) =>
+					sub.id === subId ? { ...sub, ...data.data } : sub
+				)
+			);
+		})
+		.catch((error) => console.log(error))
+	}
 	
 	var status = ""
-
 	const all_subs = subscriptions.map(sub => {
 		if (sub.attributes.status === true) {
 			status = "Active"
@@ -30,6 +50,9 @@ function SubscriptionsComponent({ subscriptions }) {
 					<td>
 						<p>{status}</p>
 					</td>
+					<td>
+						<button onClick={() => updateSubStatus(sub.id, !sub.attributes.status)}>Update Status</button>
+					</td>
 				</tr>
 		</tbody>
 		)
@@ -52,6 +75,9 @@ function SubscriptionsComponent({ subscriptions }) {
 						</td>
 						<td>
 							<p>Status:</p>
+						</td>
+						<td>
+							<p>Update:</p>
 						</td>
 					</tr>
 				</thead>

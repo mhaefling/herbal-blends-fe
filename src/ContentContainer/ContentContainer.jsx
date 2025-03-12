@@ -72,7 +72,7 @@ function ContentContainer() {
 			<main className="HBContent">
 				<NavComponent />
 				<Routes>
-					<Route path="/" element={<SubscriptionsComponent subscriptions={subscriptions} />} />
+					<Route path="/" element={<SubscriptionsComponent subscriptions={subscriptions} setSubscriptions={setSubscriptions} />} />
 					<Route path="/subscriptions/:id" element={<DetailedSubscription />} />
 					<Route path="/customers" element={<CustomersComponent customers={customers} />} />
 					<Route path="/teas" element={<TeasComponent teas={teas} />} />
