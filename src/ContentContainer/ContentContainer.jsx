@@ -5,6 +5,7 @@ import SubscriptionsComponent from '../SubscriptionsComponent/SubscriptionsCompo
 import DetailedSubscription from '../DetailedSubscription/DetailedSubscription'
 import CustomersComponent from '../CustomersComponent/CustomersComponent'
 import TeasComponent from '../TeasComponent/TeasComponent'
+import './ContentContainer.css'
 
 function ContentContainer() {
 
@@ -70,13 +71,17 @@ function ContentContainer() {
 	} else {
 		return (
 			<main className="HBContent">
-				<NavComponent />
-				<Routes>
-					<Route path="/" element={<SubscriptionsComponent subscriptions={subscriptions} setSubscriptions={setSubscriptions} />} />
-					<Route path="/subscriptions/:id" element={<DetailedSubscription />} />
-					<Route path="/customers" element={<CustomersComponent customers={customers} />} />
-					<Route path="/teas" element={<TeasComponent teas={teas} />} />
-				</Routes>
+				<nav className="HBNavigation">
+					<NavComponent />
+				</nav>
+				<section className="HBMainContent">
+					<Routes>
+						<Route path="/" element={<SubscriptionsComponent subscriptions={subscriptions} setSubscriptions={setSubscriptions} />} />
+						<Route path="/subscriptions/:id" element={<DetailedSubscription />} />
+						<Route path="/customers" element={<CustomersComponent customers={customers} />} />
+						<Route path="/teas" element={<TeasComponent teas={teas} />} />
+					</Routes>
+				</section>
 			</main>
 		)
 	}
