@@ -1,11 +1,88 @@
 .HBSubDetails {
 	background-color: white;
-}
-
-.HBSubDetails h2 {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 	color: black;
 }
 
-.HBSubDetails p {
+.HBSubDetails table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.subName {
+	border-bottom: 1px solid black;
 	color: black;
+	text-align: center;
+}
+
+.subDetails td {
+	width: 50%;
+}
+.subInfo {
+	text-decoration: underline;
+	font-weight: bold;
+}
+.subPricing td {
+	border-bottom: 1px solid black;
+}
+
+.subPricing td p {
+	margin-top: 0px;
+}
+
+.subPricing td {
+	width: 50%;
+}
+
+.subCategories {
+	width: 35%;
+}
+
+.subTeaList {
+	text-align: center;
+}
+
+.subTeaDesc {
+	align-items: center;
+	text-align: center;
+	border-bottom: 1px solid black	;
+}
+
+.subTeaDesc section {
+	width: 100%;
+}
+
+.teaDescription p {
+	width: 100%;
+	text-align: left;
+}
+
+.test {
+	text-align: center;
+}
+
+.teaValues {
+	margin-top: 0px;
+}
+#Teas {
+	width: 60%;
+}
+
+.subCustomers {
+	border-top: 1px solid black;
+}
+
+.activeCustomers {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+	flex-wrap: wrap;
+}
+
+.activeCustomers section {
+	text-align: left;
+	width: 100%;
 }
