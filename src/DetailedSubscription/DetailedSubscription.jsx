@@ -50,25 +50,27 @@ function DetailedSubscription() {
 		}
 	};
 
-	const activeCustomers = subDetails?.attributes?.customers?.filter((customer) => customer.sub_status === true).map((customer) => {
+	const activeCustomers = subDetails?.attributes?.customers?.map((customer) => {
+		if (subDetails.attributes.status == customer.sub_status) {
 			return (
 				<div key={customer.id} alt="Active Customer" className="Customers">
-					<p>{customer.first_name} {customer.last_name}</p>
+					<p key={customer.id}>{customer.first_name} {customer.last_name}</p>
 					<a href={`mailto:${customer.email}`} alt="Email Customer">{customer.email}</a>
 				</div>
 			)
 		}
-	)
+	})
 
-	const deactiveCustomers = subDetails?.attributes?.customers?.filter((customer) => customer.sub_status === false).map((customer) => {
-		return (
-			<div key={customer.id} alt="Active Customer" className="Customers">
-				<p>{customer.first_name} {customer.last_name}</p>
-				<a href={`mailto:${customer.email}`} alt="Email Customer">{customer.email}</a>
-			</div>
-		)
-	}
-)
+	const deactiveCustomers = subDetails?.attributes?.customers?.map((customer) => {
+		if (subDetails.attributes.status != customer.sub_status) {
+			return (
+				<div key={customer.id} alt="Active Customer" className="Customers">
+					<p key={customer.id}>{customer.first_name} {customer.last_name}</p>
+					<a href={`mailto:${customer.email}`} alt="Email Customer">{customer.email}</a>
+				</div>
+			)
+		}
+	})
 
 	if (!subDetails) {
 		return (
