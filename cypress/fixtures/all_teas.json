@@ -1,0 +1,55 @@
+{
+	"data": [
+			{
+					"id": "1",
+					"type": "tea",
+					"attributes": {
+							"title": "Arizona Green Tea",
+							"description": "Plastic bottle tea",
+							"temp": 2,
+							"brew_time": 0,
+							"customer_count": 3,
+							"subscription_count": 1
+					}
+			},
+			{
+					"id": "2",
+					"type": "tea",
+					"attributes": {
+							"title": "Black Tea",
+							"description": "Black tea is the most oxidized of all tea types",
+							"temp": 20,
+							"brew_time": 15,
+							"customer_count": 0,
+							"subscription_count": 0
+					}
+			},
+			{
+					"id": "3",
+					"type": "tea",
+					"attributes": {
+							"title": "New Tea",
+							"description": "Testing a new tea",
+							"temp": 5,
+							"brew_time": 10,
+							"customer_count": 0,
+							"subscription_count": 0
+					}
+			},
+			{
+					"id": "4",
+					"type": "tea",
+					"attributes": {
+							"title": "New Tea2",
+							"description": "Testing a new tea for",
+							"temp": 5,
+							"brew_time": 20,
+							"customer_count": 0,
+							"subscription_count": 0
+					}
+			}
+	],
+	"meta": {
+			"total_available_teas": 4
+	}
+}

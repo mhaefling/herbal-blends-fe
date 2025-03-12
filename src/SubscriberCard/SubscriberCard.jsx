@@ -23,6 +23,16 @@ function SubscriberCard({ sub, status, setSubscriptions }) {
 			);
 		})
 		.catch((error) => console.log(error))
+
+		fetch("http://localhost:3000/api/v1/subscriptions")
+			.then((response) => response.json())
+			.then((data) => {
+				setSubscriptions(data.data)
+			})
+			.catch((error) => {
+				console.log(error)
+			}
+		)
 	}
 
 	return (

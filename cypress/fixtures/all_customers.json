@@ -1,0 +1,37 @@
+{
+	"data": [
+			{
+					"id": "1",
+					"type": "customer",
+					"attributes": {
+							"first_name": "Jolly",
+							"last_name": "Green",
+							"email": "JollyGreen@gmail.com",
+							"address": "123 JollyGreen Street"
+					}
+			},
+			{
+					"id": "2",
+					"type": "customer",
+					"attributes": {
+							"first_name": "Big",
+							"last_name": "Red",
+							"email": "BigRed@Gmail.com",
+							"address": "123 BigRed Way"
+					}
+			},
+			{
+					"id": "3",
+					"type": "customer",
+					"attributes": {
+							"first_name": "Matt",
+							"last_name": "Haefling",
+							"email": "mhaefling@protonmail.com",
+							"address": "123 main st."
+					}
+			}
+	],
+	"meta": {
+			"total_customers": 3
+	}
+}
