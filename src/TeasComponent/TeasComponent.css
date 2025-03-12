@@ -1,0 +1,35 @@
+.HBTeaList {
+	background-color: white;
+}
+
+.HBTeaList h2 {
+	color:black
+}
+
+.HBTeaList img{
+	height: 25%;
+	width: 25%;
+}
+
+.HBTeaList table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.HBTeaList tr {
+	border: 1px solid black;
+}
+
+.teaIcon {
+	width: 4%;
+}
+
+.HBTeaList td {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+
+}
+
+.HBTeaList p {
+	color: black;
+}
