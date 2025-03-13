@@ -52,7 +52,7 @@ function DetailedSubscription() {
 	};
 
 	const activeCustomers = subDetails?.attributes?.customers?.map((customer) => {
-		if (subDetails.attributes.status == customer.sub_status) {
+		if (subDetails.attributes.status == true && customer.sub_status == true) {
 			return (
 				<div key={customer.id} alt="Active Customer" className="Customers">
 					<p key={customer.id}>{customer.first_name} {customer.last_name}</p>
@@ -63,7 +63,7 @@ function DetailedSubscription() {
 	})
 
 	const deactiveCustomers = subDetails?.attributes?.customers?.map((customer) => {
-		if (subDetails.attributes.status != customer.sub_status) {
+		if (customer.sub_status == false) {
 			return (
 				<div key={customer.id} alt="Active Customer" className="Customers">
 					<p key={customer.id}>{customer.first_name} {customer.last_name}</p>
@@ -107,7 +107,7 @@ function DetailedSubscription() {
 						</tr>
 						<tr>
 							<td className="subTeaDesc" colSpan="2">
-								<label className="subTeaList" for="Subscription Teas">Select Tea Description:</label>
+								<label className="subTeaList">Select Tea Description:</label>
 								<select 
 								id="Teas"
 								name="HBTeas" 
