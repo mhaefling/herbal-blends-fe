@@ -1,0 +1,44 @@
+{
+	"data": {
+			"id": "1",
+			"type": "subscription",
+			"attributes": {
+					"title": "Green Tea Lovers",
+					"price": 5.5,
+					"status": true,
+					"frequency": "monthly",
+					"total_active_customers": 2,
+					"teas": [
+							{
+									"title": "Arizona Green Tea",
+									"description": "Plastic bottle tea",
+									"temp": 2,
+									"brew_time": 0
+							}
+					],
+					"customers": [
+							{
+									"first_name": "Jolly",
+									"last_name": "Green",
+									"email": "JollyGreen@gmail.com",
+									"address": "123 JollyGreen Street",
+									"sub_status": true
+							},
+							{
+									"first_name": "Big",
+									"last_name": "Red",
+									"email": "BigRed@Gmail.com",
+									"address": "123 BigRed Way",
+									"sub_status": true
+							},
+							{
+									"first_name": "Matt",
+									"last_name": "Haefling",
+									"email": "mhaefling@protonmail.com",
+									"address": "123 main st.",
+									"sub_status": false
+							}
+					]
+			}
+	}
+}
