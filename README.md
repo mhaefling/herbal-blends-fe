@@ -28,7 +28,7 @@ It allows you to deactivate a subscription and re-active a subscription.
 - Clone this repo down to your local hard drive with the following command:
 `git@github.com:mhaefling/herbal-blends-fe.git`
 - Change into the project directory with the following command:
-`cd Cardfolio-FE`
+`cd herbal-blends-be`
 - Start the Frontend Server with the following command:
 `npm install` & `npm start`
 
