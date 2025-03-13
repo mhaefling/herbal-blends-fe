@@ -12,6 +12,7 @@ function ContentContainer() {
 	const [subscriptions, setSubscriptions] = useState()
 	const [customers, setCustomers] = useState()
 	const [teas, setTeas] = useState()
+	const [errorMessage, setErrorMessage] = useState("Loading Subscription, Customers, Teas Data...")
 
 	function getAllSubscriptions() {
 		fetch("http://localhost:3000/api/v1/subscriptions")
@@ -20,7 +21,7 @@ function ContentContainer() {
 				setSubscriptions(data.data)
 			})
 			.catch((error) => {
-				console.log(error)
+				setErrorMessage(error)
 			}
 		)
 	};
@@ -32,7 +33,7 @@ function ContentContainer() {
 				setCustomers(data.data)
 			})
 			.catch((error) => {
-				console.log(error)
+				setErrorMessage(error)
 			}
 		)
 	};
@@ -44,7 +45,7 @@ function ContentContainer() {
 				setTeas(data.data)
 			})
 			.catch((error) => {
-				console.log(error)
+				setErrorMessage(error)
 			}
 		)
 	}
@@ -65,7 +66,7 @@ function ContentContainer() {
 	if (!subscriptions && !customers && !teas) {
 		return (
 			<main className="HBContent">
-				<h1>Loading Subscription, Customers, Teas Data...</h1>
+				<h1>{errorMessage}</h1>
 			</main>
 		)
 	} else {

@@ -22,7 +22,9 @@ function SubscriberCard({ sub, status, setSubscriptions }) {
 				)
 			);
 		})
-		.catch((error) => console.log(error))
+		.catch((error) => {
+			alert(error)
+		})
 
 		fetch("http://localhost:3000/api/v1/subscriptions")
 			.then((response) => response.json())
@@ -30,7 +32,7 @@ function SubscriberCard({ sub, status, setSubscriptions }) {
 				setSubscriptions(data.data)
 			})
 			.catch((error) => {
-				console.log(error)
+				alert(error)
 			}
 		)
 	}

@@ -5,6 +5,7 @@ import '../DetailedSubscription/DetailedSubscription.css'
 function DetailedSubscription() {
 	const [subDetails, setSubDetails] = useState()
 	const [selectedTeaDescription, setSelectedTeaDescription] = useState()
+	const [errorMessage, setErrorMessage] =useState("Loading Subscription Details...")
 	const subId = useParams().id
 
 	function getSingleSub() {
@@ -14,7 +15,7 @@ function DetailedSubscription() {
 				setSubDetails(data.data)
 			})
 			.catch((error) => {
-				console.log(error)
+				setErrorMessage(error)
 			})
 	};
 
@@ -75,7 +76,7 @@ function DetailedSubscription() {
 	if (!subDetails) {
 		return (
 			<section className="HBSubDetails">
-				<h2>Loading Subscription Details...</h2>
+				<h2>{errorMessage}</h2>
 			</section>
 		)
 	} else {
