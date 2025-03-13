@@ -1,0 +1,40 @@
+{
+	"data": [
+			{
+					"id": "3",
+					"type": "subscription",
+					"attributes": {
+							"title": "Black Tea Lovers",
+							"price": 2.5,
+							"status": true,
+							"frequency": "weekly",
+							"total_active_customers": 0
+					}
+			},
+			{
+					"id": "2",
+					"type": "subscription",
+					"attributes": {
+							"title": "White Tea Lovers",
+							"price": 7.5,
+							"status": true,
+							"frequency": "monthly",
+							"total_active_customers": 0
+					}
+			},
+			{
+					"id": "1",
+					"type": "subscription",
+					"attributes": {
+							"title": "Green Tea Lovers",
+							"price": 5.5,
+							"status": true,
+							"frequency": "monthly",
+							"total_active_customers": 2
+					}
+			}
+	],
+	"meta": {
+			"total_subscriptions": 3
+	}
+}

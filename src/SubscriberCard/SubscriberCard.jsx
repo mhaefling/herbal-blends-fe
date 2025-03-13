@@ -22,7 +22,19 @@ function SubscriberCard({ sub, status, setSubscriptions }) {
 				)
 			);
 		})
-		.catch((error) => console.log(error))
+		.catch((error) => {
+			alert(error)
+		})
+
+		fetch("http://localhost:3000/api/v1/subscriptions")
+			.then((response) => response.json())
+			.then((data) => {
+				setSubscriptions(data.data)
+			})
+			.catch((error) => {
+				alert(error)
+			}
+		)
 	}
 
 	return (
@@ -32,7 +44,7 @@ function SubscriberCard({ sub, status, setSubscriptions }) {
 					<tr>
 						<td className="subIcon"><img src={subIcon} alt="Subscription icon" /></td>
 						<td className="subName">
-							<Link to={`/subscriptions/${sub.id}`}>
+							<Link className="subLink" to={`/subscriptions/${sub.id}`}>
 								<p>{sub.attributes.title}</p>
 							</Link>
 						</td>

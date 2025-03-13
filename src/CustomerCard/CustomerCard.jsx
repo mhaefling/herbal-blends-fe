@@ -11,7 +11,9 @@ function CustomerCard({ customer }) {
 						<td className="customerIcon"><img src={customerIcon} alt="Customer Icon" /></td>
 						<td className="customerFirstName"><p>{customer.attributes.first_name}</p></td>
 						<td className="customerLastName"><p>{customer.attributes.last_name}</p></td>
-						<td className="customerEmail"><p>{customer.attributes.email}</p></td>
+						<td className="customerEmail">
+							<a href={`mailto:${customer.attributes.email}`} alt="Contact the admin of this site">{customer.attributes.email}</a>
+						</td>
 						<td className="customerAddress"><p>{customer.attributes.address}</p></td>
 					</tr>
 				</tbody>
